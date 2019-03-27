@@ -86,7 +86,7 @@ The app will allow the user to save information on places they have been, and/or
 
 ### [BONUS] Digital Wireframes & Mockups
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<a href="https://ibb.co/H7jLPMr"><img src="https://i.ibb.co/TcsD0nH/Screen-Shot-2019-03-27-at-3-41-09-PM.png" alt="Screen-Shot-2019-03-27-at-3-41-09-PM" border="0"></a>
 
 ### [BONUS] Interactive Prototype
 
