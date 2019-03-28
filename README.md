@@ -50,8 +50,8 @@ The app will allow the user to save information on places they have been, and/or
 * Register 
     * User can register
 * Stream
-    * User can view other user's trips
-    * Get suggesting places to visit during the trip
+    * User can view other user's trips (Optional)
+    * Get suggesting places to visit during the trip (Optional)
 * Detail
     * User can view journal for trip
 * Creation
@@ -60,15 +60,15 @@ The app will allow the user to save information on places they have been, and/or
     * User can create journal for trip
 * Profile
     * User profile
-* Maps
+* Maps (Optional)
     * Geo-caching
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Feed
 * My Trips
+* Add trip
 * Logout
 
 **Flow Navigation** (Screen to Screen)
