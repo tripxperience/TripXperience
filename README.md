@@ -50,8 +50,8 @@ The app will allow the user to save information on places they have been, and/or
 * Register 
     * User can register
 * Stream
-    * User can view other user's trips (Optional)
-    * Get suggesting places to visit during the trip (Optional)
+    * User can view other user's trips
+    * Get suggesting places to visit during the trip
 * Detail
     * User can view journal for trip
 * Creation
@@ -60,15 +60,15 @@ The app will allow the user to save information on places they have been, and/or
     * User can create journal for trip
 * Profile
     * User profile
-* Maps (Optional)
+* Maps
     * Geo-caching
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
+* Feed
 * My Trips
-* Add trip
 * Logout
 
 **Flow Navigation** (Screen to Screen)
@@ -86,18 +86,49 @@ The app will allow the user to save information on places they have been, and/or
 
 ### [BONUS] Digital Wireframes & Mockups
 
-<a href="https://ibb.co/H7jLPMr"><img src="https://i.ibb.co/TcsD0nH/Screen-Shot-2019-03-27-at-3-41-09-PM.png" alt="Screen-Shot-2019-03-27-at-3-41-09-PM" border="0"></a>
-
 ### [BONUS] Interactive Prototype
-
-<img src='https://media.giphy.com/media/XoM1Ql2bt6aVS6foQS/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+| Property   | Type     | Description |
+| --------   | -------- | --------    |
+| trip   | Object | List of trips    |
+| author     | Pointer to User | Author of post |
+| image   | File | image that a user adds to post    |
+| createdAt   | Datetime | date when post is created (default field)|
+| updatedAt   | Datetime | date when post is last updated (default field)|
+| description   | String | description of trip    |
+
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+[Add list of network requests by screen ]
+* Stream (Home Feed Screen)
+    * (Read/GET) Query all posts where user is author
+
+    ```post
+    let query = PFQuery(className:"Post")
+    query.whereKey("author", equalTo: currentUser)
+    query.order(byDescending: "createdAt")
+    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let posts = posts {
+          print("Successfully retrieved \(posts.count) posts.")
+      // TODO: Do something with posts...
+       }
+    }
+    ```
+    * (Create/POST) Create a new trip
+    * (Delete) Delete existing trip
+    * (Create/POST) Create new pictures on trips
+    * (Delete) Delete existing photo
+* Create Post Screen
+    * (Create/POST) Create a new post object
+* Profile Screen
+    * (Read/GET) Query of user's trips
+    * (Update/PUT) Update user story
+
+[Create basic snippets for each Parse network request]
+[OPTIONAL: List endpoints if using existing API such as Yelp]
