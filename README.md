@@ -107,7 +107,7 @@ The app will allow the user to save information on places they have been, and/or
 * Stream (Home Feed Screen)
     * (Read/GET) Query all posts where user is author
 
-    ```post
+    ```swift
     let query = PFQuery(className:"Post")
     query.whereKey("author", equalTo: currentUser)
     query.order(byDescending: "createdAt")
