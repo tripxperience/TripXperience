@@ -131,5 +131,5 @@ The app will allow the user to save information on places they have been, and/or
     * (Read/GET) Query of user's trips
     * (Update/PUT) Update user story
 
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+[Create basic snippets for each Parse network request]
+[OPTIONAL: List endpoints if using existing API such as Yelp]
