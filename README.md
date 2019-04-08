@@ -89,6 +89,7 @@ The app will allow the user to save information on places they have been, and/or
 <img src='https://media.giphy.com/media/ZczhtknUMcKV5Q0BOm/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### [BONUS] Interactive Prototype
+<a href="https://ibb.co/vJ5VPXx"><img src="https://i.ibb.co/cN5kFYc/Screen-Shot-2019-04-08-at-2-52-02-PM.png" alt="Screen-Shot-2019-04-08-at-2-52-02-PM" border="0"></a>
 
 ## Schema 
 [This section will be completed in Unit 9]
