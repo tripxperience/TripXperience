@@ -86,7 +86,10 @@ The app will allow the user to save information on places they have been, and/or
 
 ### [BONUS] Digital Wireframes & Mockups
 
+<img src='https://media.giphy.com/media/ZczhtknUMcKV5Q0BOm/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ### [BONUS] Interactive Prototype
+https://www.figma.com/file/ecrw1lEfBX7tz5476mINgTaW/Untitled?node-id=2%3A2
 
 ## Schema 
 [This section will be completed in Unit 9]
