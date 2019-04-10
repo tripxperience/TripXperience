@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Trip-->
+        <!--AddTrip-->
         <scene sceneID="hXk-xz-6fb">
             <objects>
-                <viewController id="tM6-KT-16T" sceneMemberID="viewController">
+                <viewController title="AddTrip" id="tM6-KT-16T" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsH-YK-uc6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,17 +26,17 @@
             </objects>
             <point key="canvasLocation" x="118" y="557"/>
         </scene>
-        <!--Home-->
+        <!--MyTrip-->
         <scene sceneID="Ys1-L7-Rp6">
             <objects>
-                <viewController id="ITq-Ff-Vd6" sceneMemberID="viewController">
+                <viewController title="MyTrip" id="ITq-Ff-Vd6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dij-HA-dWB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Waz-oH-9Qo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="xWp-Dt-x2b"/>
+                    <tabBarItem key="tabBarItem" title="My Trip" id="xWp-Dt-x2b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-BH-nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
