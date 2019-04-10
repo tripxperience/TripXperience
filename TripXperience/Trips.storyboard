@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="118" y="557"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="Ys1-L7-Rp6">
             <objects>
                 <viewController id="ITq-Ff-Vd6" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Waz-oH-9Qo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xWp-Dt-x2b"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="xWp-Dt-x2b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-BH-nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
