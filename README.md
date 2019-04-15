@@ -139,3 +139,6 @@ https://www.figma.com/file/ecrw1lEfBX7tz5476mINgTaW/Untitled?node-id=2%3A2
 
 ### Progress
 
+Here's a walkthrough for Week 10:
+
+<img src='http://g.recordit.co/bhGuJAoae5.gif' title='Video Walkthrough (Week 10)' width='' alt='Video Walkthrough' />
