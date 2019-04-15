@@ -8,6 +8,7 @@ target 'TripXperience' do
   # Pods for TripXperience
 
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 
 
