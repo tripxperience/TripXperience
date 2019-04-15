@@ -136,3 +136,6 @@ https://www.figma.com/file/ecrw1lEfBX7tz5476mINgTaW/Untitled?node-id=2%3A2
 
 [Create basic snippets for each Parse network request]
 [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+### Progress
+
