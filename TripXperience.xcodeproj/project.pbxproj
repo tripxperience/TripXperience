@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15014F8B225BF73D00EDDD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15014F8A225BF73D00EDDD7D /* AppDelegate.swift */; };
-		15014F8D225BF73D00EDDD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15014F8C225BF73D00EDDD7D /* ViewController.swift */; };
 		15014F90225BF73D00EDDD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15014F8E225BF73D00EDDD7D /* Main.storyboard */; };
 		15014F92225BF73E00EDDD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15014F91225BF73E00EDDD7D /* Assets.xcassets */; };
 		15014F95225BF73E00EDDD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15014F93225BF73E00EDDD7D /* LaunchScreen.storyboard */; };
@@ -46,7 +45,6 @@
 		057AE85327A86BE9A31773B7 /* Pods-TripXperienceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripXperienceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TripXperienceUITests/Pods-TripXperienceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		15014F87225BF73D00EDDD7D /* TripXperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripXperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15014F8A225BF73D00EDDD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15014F8C225BF73D00EDDD7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15014F8F225BF73D00EDDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15014F91225BF73E00EDDD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15014F94225BF73E00EDDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				15014F8A225BF73D00EDDD7D /* AppDelegate.swift */,
-				15014F8C225BF73D00EDDD7D /* ViewController.swift */,
 				15014F8E225BF73D00EDDD7D /* Main.storyboard */,
 				15A9C60022653997009C12B5 /* LoginViewController.swift */,
 				15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */,
@@ -412,7 +409,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15014F8D225BF73D00EDDD7D /* ViewController.swift in Sources */,
 				3777C386225EA398009B74BA /* MyTripsCell.swift in Sources */,
 				15014F8B225BF73D00EDDD7D /* AppDelegate.swift in Sources */,
 				15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */,

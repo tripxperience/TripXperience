@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var labelMessage: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //FirebaseApp.configure()
@@ -36,11 +36,26 @@ class RegisterViewController: UIViewController {
                 
                 if error == nil {
                     print("You have successfully signed up")
-                    self.labelMessage.text = "You have successfully signed up"
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
-                    self.present(vc!, animated: true, completion: nil)
+                    // Path to redirect user to Login Page
+                    let Loginvc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                    
+                    // Alert Message
+                    let alertController = UIAlertController(title: "Success", message: "You have successfully signed up", preferredStyle: .alert)
+                    
+                    // Adding "Confirm button" to Alert Message
+                    alertController.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { _ in
+                        
+                        // Present Login VC
+                        self.present(Loginvc!, animated: true, completion: nil)
+                        
+                    }))
+                    
+                    //Present UI Alert Message
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                   
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
