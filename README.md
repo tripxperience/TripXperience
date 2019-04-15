@@ -137,6 +137,13 @@ https://www.figma.com/file/ecrw1lEfBX7tz5476mINgTaW/Untitled?node-id=2%3A2
 [Create basic snippets for each Parse network request]
 [OPTIONAL: List endpoints if using existing API such as Yelp]
 
+### User Stories
+- [x] Log in lay out 
+- [x] Register lay out
+- [x] Log in takes the user to the main view
+- [x] User has two options once being logged in, which are My trip and Add trip
+
+
 ### Progress
 
 Here's a walkthrough for Week 10:
