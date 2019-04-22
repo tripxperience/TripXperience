@@ -9,7 +9,7 @@ target 'TripXperience' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Database'
 
 
   target 'TripXperienceTests' do
