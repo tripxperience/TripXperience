@@ -39,20 +39,15 @@
         <!--MyTrip-->
         <scene sceneID="Ys1-L7-Rp6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-BH-nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="MyTrip" id="ITq-Ff-Vd6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dij-HA-dWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-TG-Up9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-TG-Up9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H4Y-tG-SYM">
-                                    <rect key="frame" x="0.0" y="157" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTripsCell" rowHeight="129" id="2sq-E0-asZ" customClass="MyTripsCell" customModule="TripXperience" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="129"/>
@@ -84,22 +79,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30A-q0-QRt">
-                                <rect key="frame" x="248" y="583" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30A-q0-QRt">
+                                <rect key="frame" x="292" y="664" width="58" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Trip"/>
+                                <state key="normal" image="tripButton"/>
                                 <connections>
                                     <segue destination="vqv-S1-iHM" kind="presentation" id="fYk-fi-dug"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9IP-TG-Up9" firstAttribute="bottom" secondItem="Waz-oH-9Qo" secondAttribute="bottom" id="L6B-Ps-S5l"/>
+                            <constraint firstItem="9IP-TG-Up9" firstAttribute="top" secondItem="Dij-HA-dWB" secondAttribute="top" id="SfP-cP-zVx"/>
+                            <constraint firstAttribute="trailing" secondItem="9IP-TG-Up9" secondAttribute="trailing" id="r2p-Va-Ze5"/>
+                            <constraint firstItem="9IP-TG-Up9" firstAttribute="leading" secondItem="Waz-oH-9Qo" secondAttribute="leading" id="s97-gd-Ule"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Waz-oH-9Qo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Trip" id="xWp-Dt-x2b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-BH-nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152.80000000000001" y="-92.364532019704441"/>
         </scene>
@@ -194,4 +194,7 @@
             <point key="canvasLocation" x="-648" y="226"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tripButton" width="512" height="512"/>
+    </resources>
 </document>

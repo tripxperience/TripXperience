@@ -126,18 +126,12 @@
 		15014F89225BF73D00EDDD7D /* TripXperience */ = {
 			isa = PBXGroup;
 			children = (
+				1543325E22711EC200784A00 /* Storyboards */,
+				1543325D22711EB000784A00 /* Controllers */,
 				15014F8A225BF73D00EDDD7D /* AppDelegate.swift */,
-				15014F8E225BF73D00EDDD7D /* Main.storyboard */,
-				15A9C60022653997009C12B5 /* LoginViewController.swift */,
-				15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */,
-				28391545225C034D00712F10 /* Trips.storyboard */,
 				15014F91225BF73E00EDDD7D /* Assets.xcassets */,
-				15014F93225BF73E00EDDD7D /* LaunchScreen.storyboard */,
 				15014F96225BF73F00EDDD7D /* Info.plist */,
 				72FC61A1225C5FDC00208FDB /* GoogleService-Info.plist */,
-				3777C385225EA398009B74BA /* MyTripsCell.swift */,
-				28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */,
-				1543325B2271135500784A00 /* ProfileViewController.swift */,
 			);
 			path = TripXperience;
 			sourceTree = "<group>";
@@ -158,6 +152,28 @@
 				15014FAC225BF73F00EDDD7D /* Info.plist */,
 			);
 			path = TripXperienceUITests;
+			sourceTree = "<group>";
+		};
+		1543325D22711EB000784A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */,
+				15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */,
+				1543325B2271135500784A00 /* ProfileViewController.swift */,
+				3777C385225EA398009B74BA /* MyTripsCell.swift */,
+				15A9C60022653997009C12B5 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1543325E22711EC200784A00 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				15014F8E225BF73D00EDDD7D /* Main.storyboard */,
+				28391545225C034D00712F10 /* Trips.storyboard */,
+				15014F93225BF73E00EDDD7D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		669D0C59021756BC472051BE /* Frameworks */ = {
