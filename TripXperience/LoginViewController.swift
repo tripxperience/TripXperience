@@ -24,26 +24,56 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
+        }
+    }
     
     @IBAction func onLogin(_ sender: Any) {
         
-        if let email = self.emailTextField.text, let password = self.passwordTextField.text {
-            // START headless_email_auth
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                // START_EXCLUDE
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                    return
-                }
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                // END_EXCLUDE
-            }
-            // END headless_email_auth
+        let email = self.emailTextField.text
+        let password = self.passwordTextField.text
+        
+        if self.emailTextField.text == "" || self.passwordTextField.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         } else {
-            print("Error: email/password can't be empty")
-        }
+    
+            Auth.auth().signIn(withEmail: email!, password: password!) { (user, error) in
+        
+                    if error == nil {
+                        
+                        //Print into the console if successfully logged in
+                        print("You have successfully logged in")
+                        
+                        //Go to the HomeViewController if the login is sucessful
+                        UserDefaults.standard.set(true, forKey: "userLoggedIn")
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        
+                    } else {
+                        
+                         print("ERROR LOGIN UNSUCCESSFUL")
+                        
+                        //Tells the user that there is an error and then gets firebase to tell them the error
+                        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
+            }
     }
 }
+    
 
 

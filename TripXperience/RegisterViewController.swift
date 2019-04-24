@@ -15,7 +15,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //FirebaseApp.configure()
@@ -23,8 +24,17 @@ class RegisterViewController: UIViewController {
     
     @IBAction func onRegister(_ sender: Any) {
         
-        if emailTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+        if emailTextField.text == "" && passwordTextField.text == "" && confirmPasswordTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Some fields may be empty. Try again!", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else if passwordTextField.text != confirmPasswordTextField.text  {
+            
+            let alertController = UIAlertController(title: "Error", message: "Your passwords do not match", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
