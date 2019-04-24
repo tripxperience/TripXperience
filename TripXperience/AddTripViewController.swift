@@ -16,6 +16,10 @@ class AddTripViewController: UIViewController {
     var ref: DatabaseReference!
     let userID = Auth.auth().currentUser?.uid
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var descriptionView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

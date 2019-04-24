@@ -62,6 +62,11 @@
                         <viewLayoutGuide key="safeArea" id="wbJ-1u-jxG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Trip" id="2Pp-kB-cSX"/>
+                    <connections>
+                        <outlet property="descriptionView" destination="bhw-YI-ass" id="aiA-2M-Vnv"/>
+                        <outlet property="imageView" destination="IJE-dF-yci" id="ydv-gq-zqg"/>
+                        <outlet property="titleField" destination="zNP-tu-QWm" id="owd-qK-KIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pI-OX-Wep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
