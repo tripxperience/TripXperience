@@ -17,6 +17,7 @@
 		15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */; };
 		15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C60022653997009C12B5 /* LoginViewController.swift */; };
 		28391546225C034D00712F10 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28391545225C034D00712F10 /* Trips.storyboard */; };
+		28406B8F2277A28200B0A84A /* HomeTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */; };
 		28A6C1A6226E76C20080B2DB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */; };
 		3777C386225EA398009B74BA /* MyTripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777C385225EA398009B74BA /* MyTripsCell.swift */; };
 		51C953490BF003D97FCCF5D7 /* Pods_TripXperienceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E29FD350F5B530924C140F /* Pods_TripXperienceTests.framework */; };
@@ -61,6 +62,7 @@
 		15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15A9C60022653997009C12B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28391545225C034D00712F10 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTripsViewController.swift; sourceTree = "<group>"; };
 		28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		3777C385225EA398009B74BA /* MyTripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCell.swift; sourceTree = "<group>"; };
 		5E22EFE25AB01C359B392A69 /* Pods-TripXperienceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripXperienceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripXperienceTests/Pods-TripXperienceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				1543325B2271135500784A00 /* ProfileViewController.swift */,
 				3777C385225EA398009B74BA /* MyTripsCell.swift */,
 				15A9C60022653997009C12B5 /* LoginViewController.swift */,
+				28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				15014F8B225BF73D00EDDD7D /* AppDelegate.swift in Sources */,
 				15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */,
 				15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */,
+				28406B8F2277A28200B0A84A /* HomeTripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
