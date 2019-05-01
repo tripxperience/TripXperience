@@ -10,6 +10,9 @@ import UIKit
 
 class MyTripsCell: UITableViewCell {
 
+    @IBOutlet weak var tripImage: UIImageView!
+    @IBOutlet weak var titleTipField: UILabel!
+    @IBOutlet weak var descriptionField: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
