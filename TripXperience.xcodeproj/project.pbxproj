@@ -18,6 +18,7 @@
 		15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C60022653997009C12B5 /* LoginViewController.swift */; };
 		28391546225C034D00712F10 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28391545225C034D00712F10 /* Trips.storyboard */; };
 		28A6C1A6226E76C20080B2DB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */; };
+		371C186B2277B5FD005DD616 /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C186A2277B5FD005DD616 /* UpdatePasswordViewController.swift */; };
 		3777C386225EA398009B74BA /* MyTripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777C385225EA398009B74BA /* MyTripsCell.swift */; };
 		51C953490BF003D97FCCF5D7 /* Pods_TripXperienceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E29FD350F5B530924C140F /* Pods_TripXperienceTests.framework */; };
 		57F6A385FFDBBBB3EDCD1C54 /* Pods_TripXperienceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D7E6E3A0BDD4704C3299A8 /* Pods_TripXperienceUITests.framework */; };
@@ -62,6 +63,7 @@
 		15A9C60022653997009C12B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28391545225C034D00712F10 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
 		28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		371C186A2277B5FD005DD616 /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
 		3777C385225EA398009B74BA /* MyTripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCell.swift; sourceTree = "<group>"; };
 		5E22EFE25AB01C359B392A69 /* Pods-TripXperienceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripXperienceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripXperienceTests/Pods-TripXperienceTests.release.xcconfig"; sourceTree = "<group>"; };
 		65E29FD350F5B530924C140F /* Pods_TripXperienceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripXperienceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				1543325B2271135500784A00 /* ProfileViewController.swift */,
 				3777C385225EA398009B74BA /* MyTripsCell.swift */,
 				15A9C60022653997009C12B5 /* LoginViewController.swift */,
+				371C186A2277B5FD005DD616 /* UpdatePasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				28A6C1A6226E76C20080B2DB /* AddTripViewController.swift in Sources */,
 				3777C386225EA398009B74BA /* MyTripsCell.swift in Sources */,
 				15014F8B225BF73D00EDDD7D /* AppDelegate.swift in Sources */,
+				371C186B2277B5FD005DD616 /* UpdatePasswordViewController.swift in Sources */,
 				15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */,
 				15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */,
 			);

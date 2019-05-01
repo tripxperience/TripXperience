@@ -12,7 +12,12 @@ import FirebaseCore
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet var nameLabel: UILabel!
+	@IBOutlet var emailLabel: UILabel!
+	@IBOutlet var profileImage: UIImageView!
+
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

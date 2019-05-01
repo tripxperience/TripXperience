@@ -16,7 +16,18 @@ class UpdatePasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+	@IBAction func onUpdatePassword(_ sender: Any) {
+		
+		
+		// TODO: LOGIC FOR UPDATE PASSWORD HERE
+		
+		
+		
+		
+		// DISMISS VIEW
+		  self.dismiss(animated: true, completion: nil)
+	}
+	
     /*
     // MARK: - Navigation
 
