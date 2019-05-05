@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import AlamofireImage
 
-class AddTripViewController: UIViewController {
+class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var ref: DatabaseReference!
     let userID = Auth.auth().currentUser?.uid
@@ -25,10 +26,47 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func onAddTripButton(_ sender: Any) {
+        let imageData = imageView.image!.pngData()
+        
         let referenceTrip = self.ref.child("Users").child(userID!).child("Trips").child(titleField.text!)
         referenceTrip.child("title").setValue(titleField.text)
         referenceTrip.child("description").setValue(descriptionView.text)
+//        referenceTrip.child("image").setValue(imageData)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onCameraButton(_ sender: Any) {
+        
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        }
+        else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.editedImage] as! UIImage
+        // Changing size of image
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+        
+        imageView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
+        
     }
     
 }

@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import AlamofireImage
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

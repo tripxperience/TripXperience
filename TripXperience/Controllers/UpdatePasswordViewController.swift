@@ -27,6 +27,10 @@ class UpdatePasswordViewController: UIViewController {
 		// DISMISS VIEW
 		  self.dismiss(animated: true, completion: nil)
 	}
+    
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 	
     /*
     // MARK: - Navigation
