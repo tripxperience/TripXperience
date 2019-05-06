@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 import AlamofireImage
 
 class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var ref: DatabaseReference!
+    var storageRef = Storage.storage().reference()
     let userID = Auth.auth().currentUser?.uid
 
     @IBOutlet weak var imageView: UIImageView!
@@ -26,12 +28,21 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onAddTripButton(_ sender: Any) {
-        let imageData = imageView.image!.pngData()
+//        let imageData = imageView.image?.pngData()
+//
+//        storageRef.putData(imageData!, metadata: nil) { (metadata, error) in
+//            if error != nil {
+//                print(error as Any)
+//            }
+//
+//            print(metadata as Any)
+//        }
+        
+//        storageRef.putData(imageData)
         
         let referenceTrip = self.ref.child("Users").child(userID!).child("Trips").child(titleField.text!)
         referenceTrip.child("title").setValue(titleField.text)
         referenceTrip.child("description").setValue(descriptionView.text)
-//        referenceTrip.child("image").setValue(imageData)
         self.dismiss(animated: true, completion: nil)
     }
     

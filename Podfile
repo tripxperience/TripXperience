@@ -10,6 +10,8 @@ target 'TripXperience' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'AlamofireImage'
+  pod 'Firebase/Storage'
 
 
   target 'TripXperienceTests' do
