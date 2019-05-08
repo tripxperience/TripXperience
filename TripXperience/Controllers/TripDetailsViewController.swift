@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class TripDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,6 +16,8 @@ class TripDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var tripDetails: UILabel!
+    @IBOutlet weak var uploadedImage: UIImageView!
     
     @IBAction func Back(_ sender: Any) {
         dismiss(animated: true, completion: nil)

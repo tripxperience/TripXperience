@@ -344,6 +344,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JX3-UR-cZm"/>
                     </view>
+                    <connections>
+                        <outlet property="tripDetails" destination="dFV-DV-BIw" id="H5h-Mv-6w8"/>
+                        <outlet property="uploadedImage" destination="c39-ur-RwG" id="1ic-U4-Us1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMH-u6-VFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
