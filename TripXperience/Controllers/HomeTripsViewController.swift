@@ -47,19 +47,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         // ID is referencing the Storyboard.
         let cell = HomeTripTableView.dequeueReusableCell(withIdentifier: "TripCell")
             as! MyTripsCell
-        
-        
-//        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-//            // Get user value
-//            let value = snapshot.value as? NSDictionary
-//            let username = value?["username"] as? String ?? ""
-//            let user = User(username: username)
-//
-//            // ...
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
-        
+		
         
         return cell
         
