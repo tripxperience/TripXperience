@@ -307,20 +307,47 @@
             </objects>
             <point key="canvasLocation" x="897" y="-729"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Details View Controller-->
         <scene sceneID="0cm-fi-DGq">
             <objects>
-                <viewController id="FEP-UZ-0Md" sceneMemberID="viewController">
+                <viewController id="FEP-UZ-0Md" customClass="TripDetailsViewController" customModule="TripXperience" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oim-CM-NL8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNq-KV-GuE">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="jTa-Ow-phs">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Sju-g6-v6A">
+                                            <connections>
+                                                <action selector="Back:" destination="FEP-UZ-0Md" id="V5Y-pq-7yG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFV-DV-BIw">
+                                <rect key="frame" x="17" y="104" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-2" translatesAutoresizingMaskIntoConstraints="NO" id="c39-ur-RwG">
+                                <rect key="frame" x="1" y="391" width="374" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JX3-UR-cZm"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMH-u6-VFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="-129"/>
+            <point key="canvasLocation" x="1556" y="-129.31034482758622"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V5v-ZB-R9q">
