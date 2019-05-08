@@ -345,6 +345,7 @@
                         <viewLayoutGuide key="safeArea" id="JX3-UR-cZm"/>
                     </view>
                     <connections>
+                        <outlet property="TitleBar" destination="jTa-Ow-phs" id="L4o-pl-3rF"/>
                         <outlet property="tripDetails" destination="dFV-DV-BIw" id="H5h-Mv-6w8"/>
                         <outlet property="uploadedImage" destination="c39-ur-RwG" id="1ic-U4-Us1"/>
                     </connections>

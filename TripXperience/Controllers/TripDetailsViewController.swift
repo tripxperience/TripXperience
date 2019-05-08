@@ -21,6 +21,7 @@ class TripDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var TitleBar: UINavigationItem!
     @IBOutlet weak var tripDetails: UILabel!
     @IBOutlet weak var uploadedImage: UIImageView!
     
