@@ -8,8 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import AlamofireImage
+
 class TripDetailsViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
