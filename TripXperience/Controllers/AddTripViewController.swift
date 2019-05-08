@@ -25,7 +25,7 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func onAddTripButton(_ sender: Any) {
-        let referenceTrip = self.ref.child("Users").child(userID!).child("Trips").child(titleField.text!)
+        let referenceTrip = self.ref.child("Users").child(userID!).child(titleField.text!)
         referenceTrip.child("title").setValue(titleField.text)
         referenceTrip.child("description").setValue(descriptionView.text)
         self.dismiss(animated: true, completion: nil)

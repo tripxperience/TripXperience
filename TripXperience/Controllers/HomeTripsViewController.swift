@@ -12,7 +12,14 @@ import FirebaseDatabase
 
 class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Dictionary to store the Trips.          key[Title] ~> values[Any]
+    var trips = [String:Any]()
+    var tripsCopy = [String]()
+    var numberTrips = 0
+    var subArrayDictionary = [String]()
+    
     // View Outlet
     @IBOutlet weak var HomeTripTableView: UITableView!
     
@@ -21,7 +28,6 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Getting the current user ID to fetch THEIR trips.
     let userID = Auth.auth().currentUser?.uid
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +38,52 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         // Connecting the View.
         HomeTripTableView.delegate = self
         HomeTripTableView.dataSource = self
+        
+        // Fetching Trips from Database
+        Database
+            .database()
+            .reference()
+            .child("Users")
+            .child(Auth.auth().currentUser!.uid)
+            .queryOrderedByKey()
+            .observeSingleEvent(of: .value, with: { snapshot in
+                
+                guard let dictionary = snapshot.value as? [String:Any] else {
+                    print("Error")
+                    return
+                }
+                
+                // Storing the dictionary into trips
+                self.trips = dictionary
+                //                print(self.trips)
+                
+//                print(self.trips)
+                
+                
+                
+                
+                let arrayDictionary = Array(self.trips.keys)
+                
+                print(arrayDictionary[0])
+                
+//                 var index1 = arrayDictionary[0]
+                
+//                var singleTripDictionary = Dictionary(self.trips[index1])
+                
+               // singleTripDictionary = Dictionary(singleTripDictionary)
+                
+                
 
+                
+                self.tableView.reloadData()
+        
+            })
     }
     
     // Number of actual cells being returned.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of trips each user has.
-        return 5;
+        return trips.count
     }
     
     // Declaring reusable cell. (NOT STATIC)
@@ -48,21 +93,25 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = HomeTripTableView.dequeueReusableCell(withIdentifier: "TripCell")
             as! MyTripsCell
         
+        for child in self.trips{
         
-//        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-//            // Get user value
-//            let value = snapshot.value as? NSDictionary
-//            let username = value?["username"] as? String ?? ""
-//            let user = User(username: username)
-//
-//            // ...
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
-        
-        
+            if let trip = child.value as? [String:AnyObject]{
+
+               // print(trip)
+                let description = trip["description"]
+                let title = trip["title"]
+//                        let image = trip["image"]
+//                        print(description)
+                cell.titleTipField.text = title as? String
+//                        print(title)
+                cell.descriptionField.text = description as? String
+
+//                        cell.tripImage.image = image as! UIImage
+            }
+
+        }
         return cell
-        
+
     }
 
 }
