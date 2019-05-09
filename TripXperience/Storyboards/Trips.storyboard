@@ -79,7 +79,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="592.61083743842369"/>
+            <point key="canvasLocation" x="137" y="734"/>
         </scene>
         <!--Update Password View Controller-->
         <scene sceneID="JTc-s2-1Zo">
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtK-yC-l6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="592.61083743842369"/>
+            <point key="canvasLocation" x="1122" y="734"/>
         </scene>
         <!--MyTrip-->
         <scene sceneID="Ys1-L7-Rp6">
@@ -160,35 +160,33 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripCell" rowHeight="129" id="2sq-E0-asZ" customClass="MyTripsCell" customModule="TripXperience" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="129"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripCell" rowHeight="140" id="2sq-E0-asZ" customClass="MyTripsCell" customModule="TripXperience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2sq-E0-asZ" id="Ej8-do-saZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="128.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkr-Pd-sYl">
-                                                    <rect key="frame" x="0.0" y="6" width="193" height="117"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkr-Pd-sYl">
+                                                    <rect key="frame" x="0.0" y="8.0000000000000071" width="193" height="123.66666666666669"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
-                                                    <rect key="frame" x="201" y="6" width="58" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
+                                                    <rect key="frame" x="216" y="48" width="159" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6l-Le-y8P">
-                                                    <rect key="frame" x="201" y="46" width="174" height="72"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tkr-Pd-sYl" firstAttribute="leading" secondItem="Ej8-do-saZ" secondAttribute="leading" constant="8" id="5FJ-TY-8UC"/>
+                                                <constraint firstItem="E3s-DX-7uA" firstAttribute="top" secondItem="Ej8-do-saZ" secondAttribute="top" constant="48" id="CHW-ev-qlQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="E3s-DX-7uA" secondAttribute="bottom" constant="59.670000000000002" id="FF6-dc-zhM"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tkr-Pd-sYl" secondAttribute="bottom" constant="8" id="bOk-6h-3fZ"/>
+                                                <constraint firstItem="Tkr-Pd-sYl" firstAttribute="top" secondItem="Ej8-do-saZ" secondAttribute="top" constant="8" id="guj-8g-5Eb"/>
+                                                <constraint firstItem="E3s-DX-7uA" firstAttribute="leading" secondItem="Tkr-Pd-sYl" secondAttribute="trailing" constant="4" id="tfQ-gb-wXA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="descriptionField" destination="T6l-Le-y8P" id="n7J-YY-YuD"/>
                                             <outlet property="titleTipField" destination="E3s-DX-7uA" id="QMM-Bg-vHq"/>
                                             <outlet property="tripImage" destination="Tkr-Pd-sYl" id="YkU-ED-1zm"/>
                                             <segue destination="FEP-UZ-0Md" kind="show" id="ee5-9t-Rcb"/>
@@ -196,8 +194,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-
-
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30A-q0-QRt">
                                 <rect key="frame" x="288" y="664" width="62" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -206,7 +202,6 @@
                                     <segue destination="vqv-S1-iHM" kind="show" id="EoO-FP-dHq"/>
                                 </connections>
                             </button>
-
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-BH-nc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="-92.364532019704441"/>
+            <point key="canvasLocation" x="136.80000000000001" y="-121.18226600985223"/>
         </scene>
         <!--Add Trip View Controller-->
         <scene sceneID="lzV-MJ-sRa">
@@ -329,7 +324,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="897" y="-729"/>
+            <point key="canvasLocation" x="919" y="-790"/>
         </scene>
         <!--Trip Details View Controller-->
         <scene sceneID="0cm-fi-DGq">
@@ -371,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMH-u6-VFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="-129.31034482758622"/>
+            <point key="canvasLocation" x="1396" y="-103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V5v-ZB-R9q">

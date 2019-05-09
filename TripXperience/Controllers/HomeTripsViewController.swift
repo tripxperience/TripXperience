@@ -56,11 +56,9 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     //getting values
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
-                    let tripDescription  = tripObject?["description"]
                     print(tripTitle)
-                    print(tripDescription)
-                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
-                    
+//                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
+                    let trip = TripModel(title: tripTitle  as! String?)
                     self.userTrips.append(trip)
                 }
                 //reloading the tableview
@@ -89,7 +87,6 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         cell.titleTipField.text = trip.title
-        cell.descriptionField.text = trip.description
         
         return cell
         

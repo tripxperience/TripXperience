@@ -13,8 +13,7 @@ class TripModel {
     var title: String?
     var description: String?
     
-    init(title: String?, description: String?){
+    init(title: String?){
         self.title = title
-        self.description = description
     }
 }
