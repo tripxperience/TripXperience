@@ -15,7 +15,6 @@ class UpdatePasswordViewController: UIViewController {
     
     @IBOutlet weak var newPassword: UITextField!
     @IBOutlet weak var matchPassword: UITextField!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +59,6 @@ class UpdatePasswordViewController: UIViewController {
                         self.present(profile!, animated: true, completion: nil)
                         
                     }))
-                    
                     self.present(alertController, animated: true, completion: nil)
                 }
                 else {
@@ -76,7 +74,6 @@ class UpdatePasswordViewController: UIViewController {
                 }
             }
         }
-        
         //Update password
 	}
     

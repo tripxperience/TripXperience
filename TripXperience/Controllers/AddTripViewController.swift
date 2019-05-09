@@ -29,18 +29,16 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func onAddTripButton(_ sender: Any) {
 //        let imageData = imageView.image?.pngData()
-//
+        
 //        storageRef.putData(imageData!, metadata: nil) { (metadata, error) in
 //            if error != nil {
 //                print(error as Any)
 //            }
-//
 //            print(metadata as Any)
 //        }
-        
 //        storageRef.putData(imageData)
         
-        let referenceTrip = self.ref.child("Users").child(userID!).child("Trips").child(titleField.text!)
+        let referenceTrip = self.ref.child("Users").child(userID!).child(titleField.text!)
         referenceTrip.child("title").setValue(titleField.text)
         referenceTrip.child("description").setValue(descriptionView.text)
         self.dismiss(animated: true, completion: nil)
