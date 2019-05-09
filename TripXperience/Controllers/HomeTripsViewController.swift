@@ -13,7 +13,7 @@ import FirebaseDatabase
 class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     // Dictionary to store the Trips.          key[Title] ~> values[Any]
-    var trips = [String:Any]()
+    var trips = [[String:Any]]()
     var userTrips = [TripModel]()
     
     // View Outlet
@@ -58,9 +58,9 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     //getting values
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
-//                    print(tripTitle)
-//                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
-                    let trip = TripModel(title: tripTitle  as! String?)
+                    let tripDescription  = tripObject?["description"]
+                    print(tripTitle)
+                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
                     self.userTrips.append(trip)
                 }
                 //reloading the tableview
@@ -84,16 +84,35 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         // ID is referencing the Storyboard.
         let cell = HomeTripTableView.dequeueReusableCell(withIdentifier: "TripCell")
             as! MyTripsCell
-    
         
         let trip : TripModel
         trip = userTrips[indexPath.row]
-        
-        
+    
         cell.titleTipField.text = trip.title
         
         return cell
         
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        print("Loading up the datails screen")
+        
+        
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = HomeTripTableView.indexPath(for: cell)!
+        let trip = userTrips[indexPath.row]
+        
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! TripDetailsViewController
+        detailsViewController.userTrips = [trip]
+        HomeTripTableView.deselectRow(at: indexPath, animated: true)
     }
 
 }

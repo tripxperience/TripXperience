@@ -16,8 +16,9 @@ class TripModel {
     
     
     
-    init(title: String?){
+    init(title: String?, description: String?){
         self.title = title
+        self.description = description
     }
     
     init(title: String?, image: String?){
