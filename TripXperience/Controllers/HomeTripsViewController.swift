@@ -25,6 +25,9 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
     // Getting the current user ID to fetch THEIR trips.
     let userID = Auth.auth().currentUser?.uid
     
+    let myRefreshController = UIRefreshControl()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +38,12 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         // Connecting the View.
         HomeTripTableView.delegate = self
         HomeTripTableView.dataSource = self
-        
-        getTrips()
+//        getTrips()
+        myRefreshController.addTarget(self, action: #selector(getTrips), for: .valueChanged)
+        HomeTripTableView.refreshControl = myRefreshController
     }
     
-    
-    
-    func getTrips() {
+    @objc func getTrips() {
         // Fetching the data
         ref = Database.database().reference().child("Users").child(userID!)
         //observing the data changes
@@ -56,13 +58,15 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     //getting values
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
-                    print(tripTitle)
+//                    print(tripTitle)
 //                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
                     let trip = TripModel(title: tripTitle  as! String?)
                     self.userTrips.append(trip)
                 }
                 //reloading the tableview
+                
                 self.HomeTripTableView.reloadData()
+                self.myRefreshController.endRefreshing()
             }
         })
     

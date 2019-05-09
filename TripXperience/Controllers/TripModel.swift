@@ -12,8 +12,21 @@ class TripModel {
     
     var title: String?
     var description: String?
+    var image : String?
+    
+    
     
     init(title: String?){
         self.title = title
+    }
+    
+    init(title: String?, image: String?){
+        self.title = title
+        self.image = image
+    }
+    
+    init(title: String?, description: String?){
+        self.title = title
+        self.description = description
     }
 }
