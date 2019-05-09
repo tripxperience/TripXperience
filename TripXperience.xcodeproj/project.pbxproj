@@ -16,7 +16,6 @@
 		1543325C2271135500784A00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543325B2271135500784A00 /* ProfileViewController.swift */; };
 		15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */; };
 		15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C60022653997009C12B5 /* LoginViewController.swift */; };
-		15B48FE02283A50F0019DCDE /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B48FDF2283A50F0019DCDE /* TripModel.swift */; };
 		28391546225C034D00712F10 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28391545225C034D00712F10 /* Trips.storyboard */; };
 		28406B8F2277A28200B0A84A /* HomeTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */; };
 		28A6C1A6226E76C20080B2DB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */; };
@@ -64,7 +63,6 @@
 		1543325B2271135500784A00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15A9C60022653997009C12B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		15B48FDF2283A50F0019DCDE /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		28391545225C034D00712F10 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
 		28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTripsViewController.swift; sourceTree = "<group>"; };
 		28A6C1A5226E76C20080B2DB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				15A9C60022653997009C12B5 /* LoginViewController.swift */,
 				371C186A2277B5FD005DD616 /* UpdatePasswordViewController.swift */,
 				28406B8E2277A28200B0A84A /* HomeTripsViewController.swift */,
-				15B48FDF2283A50F0019DCDE /* TripModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -457,7 +454,6 @@
 				15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */,
 				15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */,
 				28406B8F2277A28200B0A84A /* HomeTripsViewController.swift in Sources */,
-				15B48FE02283A50F0019DCDE /* TripModel.swift in Sources */,
 				72B277B322837F1200430385 /* TripDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +711,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 297DJKKM28;
 				INFOPLIST_FILE = TripXperienceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,6 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 297DJKKM28;
 				INFOPLIST_FILE = TripXperienceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
