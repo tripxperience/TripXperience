@@ -341,7 +341,7 @@
                                     <navigationItem title="Title" id="jTa-Ow-phs">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Sju-g6-v6A">
                                             <connections>
-                                                <action selector="Back:" destination="FEP-UZ-0Md" id="V5Y-pq-7yG"/>
+                                                <action selector="backButton:" destination="FEP-UZ-0Md" id="Ihn-7l-fJ1"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -363,6 +363,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JX3-UR-cZm"/>
                     </view>
+                    <connections>
+                        <outlet property="tripDetails" destination="dFV-DV-BIw" id="TZA-bE-Zuz"/>
+                        <outlet property="tripImage" destination="c39-ur-RwG" id="1K3-RF-ooz"/>
+                        <outlet property="tripTitle" destination="jTa-Ow-phs" id="Gld-Nd-6Hh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMH-u6-VFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

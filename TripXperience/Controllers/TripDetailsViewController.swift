@@ -7,33 +7,57 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import AlamofireImage
 
 class TripDetailsViewController: UIViewController {
-
+    
+    var ref: DatabaseReference!
+    var storageRef = Storage.storage().reference()
+    let userID = Auth.auth().currentUser?.uid
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        ref = Database.database().reference()
+        
         // Do any additional setup after loading the view.
     }
     
     
-    @IBAction func Back(_ sender: Any) {
+    @IBOutlet weak var tripTitle: UINavigationItem!
+    @IBOutlet weak var tripImage: UIImageView!
+    @IBOutlet weak var tripDetails: UILabel!
+    
+   /* func start() {
+        let db_name = "Jazz"
+        
+        getTripInfo(db_name: db_name) { (is_finished, message) in
+            if is_finished {
+                print(message)
+            } else {
+                print(message)
+            }
+        }
+    }
+    
+    func getTripInfo(db_name : String, completion: @escaping (Bool, String) -> Void) {
+        
+        let request_done = false
+        
+        if request_done {
+            completion(true, "Success!")
+        } else {
+            completion(false, "Failure..")
+        }
+    }*/
+    
+    
+    @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    /*
-     @IBAction func backButton(_ sender: Any) {
-     dismiss(animated: true, completion: nil)
-     }
- */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
