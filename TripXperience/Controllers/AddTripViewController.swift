@@ -24,7 +24,6 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
     }
     
     @IBAction func onAddTripButton(_ sender: Any) {
@@ -41,6 +40,7 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        let referenceTrip = self.ref.child("Users").child(userID!).child(titleField.text!)
 //        referenceTrip.child("title").setValue(titleField.text)
 //        referenceTrip.child("description").setValue(descriptionView.text)
+        ref = Database.database().reference()
         self.saveFIRData()
         HomeTripsViewController.is_adding_trip = false
         self.dismiss(animated: true, completion: nil)
