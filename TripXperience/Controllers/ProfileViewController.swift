@@ -9,17 +9,22 @@
 import UIKit
 import Firebase
 import FirebaseCore
+import FirebaseAuth
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var emailLabel: UILabel!
 	@IBOutlet var profileImage: UIImageView!
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let userEmail = Auth.auth().currentUser?.email
+        
+//        print(userEmail as! String)
+        
+        emailLabel.text = userEmail
         // Do any additional setup after loading the view.
     }
     
