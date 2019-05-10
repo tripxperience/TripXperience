@@ -25,8 +25,15 @@ class TripDetailsViewController: UIViewController {
         
         let tripTitle = userTrips[0].title
         let tripDescription = userTrips[0].description
+        let tripImage = userTrips[0].image!
+        
+        
+        let url = URL(string: tripImage)
+    
+        
         self.titleBar.title = tripTitle
         self.detailLabel.text = tripDescription
+        self.image.af_setImage(withURL: url!)
         self.detailLabel.sizeToFit()
     }
     

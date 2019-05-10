@@ -32,6 +32,8 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.HomeTripTableView.separatorStyle = .none
+        
         // Database Reference to fetch Trips
         ref = Database.database().reference()
      
@@ -60,8 +62,11 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
                     let tripDescription  = tripObject?["description"]
-                    print(tripTitle!)
-                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
+                    let tripImage = tripObject?["imageURL"]
+                    print(tripImage)
+                
+                    let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?, image: tripImage as! String?)
+                    
                     self.userTrips.append(trip)
                 }
                 //reloading the tableview
@@ -90,6 +95,10 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         trip = userTrips[indexPath.row]
     
         cell.titleTipField.text = trip.title
+        
+        let url = URL(string: trip.image as! String!)
+        
+        cell.tripImage.af_setImage(withURL: url!)
         
         return cell
         
