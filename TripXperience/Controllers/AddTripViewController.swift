@@ -41,6 +41,8 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         let referenceTrip = self.ref.child("Users").child(userID!).child(titleField.text!)
         referenceTrip.child("title").setValue(titleField.text)
         referenceTrip.child("description").setValue(descriptionView.text)
+        
+        HomeTripsViewController.is_adding_trip = false
         self.dismiss(animated: true, completion: nil)
     }
     

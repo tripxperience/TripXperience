@@ -27,7 +27,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
     
     let myRefreshController = UIRefreshControl()
     
-    
+    static var is_adding_trip = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         HomeTripTableView.dataSource = self
 //        getTrips()
         myRefreshController.addTarget(self, action: #selector(getTrips), for: .valueChanged)
+        getTrips()
         HomeTripTableView.refreshControl = myRefreshController
     }
     
@@ -59,7 +60,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
                     let tripDescription  = tripObject?["description"]
-                    print(tripTitle)
+                    print(tripTitle!)
                     let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
                     self.userTrips.append(trip)
                 }
@@ -94,6 +95,11 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
+    
+    @IBAction func onAddButton(_ sender: Any) {
+        HomeTripsViewController.is_adding_trip = true
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -101,18 +107,20 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        print("Loading up the datails screen")
-        
-        
         // Find the selected movie
-        let cell = sender as! UITableViewCell
-        let indexPath = HomeTripTableView.indexPath(for: cell)!
-        let trip = userTrips[indexPath.row]
-        
-        // Pass the selected movie to the details view controller
-        let detailsViewController = segue.destination as! TripDetailsViewController
-        detailsViewController.userTrips = [trip]
-        HomeTripTableView.deselectRow(at: indexPath, animated: true)
+        if !HomeTripsViewController.is_adding_trip {
+            print("Clicked on CELL")
+            let cell = sender as! UITableViewCell
+            let indexPath = HomeTripTableView.indexPath(for: cell)!
+            let trip = userTrips[indexPath.row]
+            
+            // Pass the selected movie to the details view controller
+            let detailsViewController = segue.destination as! TripDetailsViewController
+            detailsViewController.userTrips = [trip]
+            HomeTripTableView.deselectRow(at: indexPath, animated: true)
+        } else {
+            print("Clicked on ADD BUTTON")
+        }
     }
 
 }

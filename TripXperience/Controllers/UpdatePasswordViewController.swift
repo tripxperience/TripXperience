@@ -15,7 +15,7 @@ class UpdatePasswordViewController: UIViewController {
     
     @IBOutlet weak var newPassword: UITextField!
     @IBOutlet weak var matchPassword: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

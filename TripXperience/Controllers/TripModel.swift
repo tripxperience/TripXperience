@@ -26,8 +26,7 @@ class TripModel {
         self.image = image
     }
     
-    init(title: String?, description: String?){
+    init(title: String?){
         self.title = title
-        self.description = description
     }
 }
