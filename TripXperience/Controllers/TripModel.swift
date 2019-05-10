@@ -13,6 +13,8 @@ class TripModel {
     var title: String?
     var description: String?
     var image : String?
+    var profile : String?
+    
     
     init(title: String?, description: String?){
         self.title = title
@@ -25,12 +27,14 @@ class TripModel {
         self.image = image
     }
     
+    
     init(title: String?, image: String?){
         self.title = title
         self.image = image
     }
     
-    init(title: String?){
-        self.title = title
+    init(profile: String?){
+        self.profile = profile
+        
     }
 }

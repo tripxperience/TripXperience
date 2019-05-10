@@ -164,10 +164,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkr-Pd-sYl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="199.66666666666666"/>
+                                                    <rect key="frame" x="8" y="0.0" width="205" height="199.66666666666666"/>
                                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Trips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
                                                     <rect key="frame" x="221" y="87.666666666666671" width="159" height="24.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="159" id="EZ7-hF-54g"/>
@@ -181,7 +181,6 @@
                                             <constraints>
                                                 <constraint firstItem="Tkr-Pd-sYl" firstAttribute="leading" secondItem="Ej8-do-saZ" secondAttribute="leading" constant="8" id="2bj-r7-0Bs"/>
                                                 <constraint firstItem="E3s-DX-7uA" firstAttribute="leading" secondItem="Tkr-Pd-sYl" secondAttribute="trailing" constant="8" id="2xf-QI-cwq"/>
-                                                <constraint firstItem="Tkr-Pd-sYl" firstAttribute="leading" secondItem="Ej8-do-saZ" secondAttribute="leading" id="iAr-fE-Ywg"/>
                                                 <constraint firstItem="Tkr-Pd-sYl" firstAttribute="centerY" secondItem="E3s-DX-7uA" secondAttribute="centerY" id="mbR-lI-7rd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="E3s-DX-7uA" secondAttribute="trailing" constant="-20" id="t8G-vC-3Pm"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="E3s-DX-7uA" secondAttribute="bottom" constant="77" id="tc4-gP-9n5"/>

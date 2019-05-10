@@ -10,22 +10,75 @@ import UIKit
 import Firebase
 import FirebaseCore
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
+import AlamofireImage
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet var emailLabel: UILabel!
 	@IBOutlet var profileImage: UIImageView!
 
+    var pictureRef: DatabaseReference!
+    
+    var profileUsers = [TripModel]()
+
+    var ref: DatabaseReference!
+    var storageRef = Storage.storage().reference()
+    let userID = Auth.auth().currentUser?.uid
+    
+   
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
         let userEmail = Auth.auth().currentUser?.email
-        
-//        print(userEmail as! String)
-        
+
         emailLabel.text = userEmail
-        // Do any additional setup after loading the view.
+        
+        
+        pictureRef = Database.database().reference().child("Pictures").child(userID!)
+        
+        
+        
+        pictureRef.observe(DataEventType.value, with: { (snapshot) in
+            //if the reference have some values
+            if snapshot.childrenCount > 0 {
+                //clearing the list
+                self.profileUsers.removeAll()
+                print("firebase call")
+                //iterating through all the values
+                for Profiles in snapshot.children.allObjects as! [DataSnapshot] {
+                    //getting values
+                    let profileObject = Profiles.value as? [String: AnyObject]
+                    let userProfile = profileObject?["profileURL"]
+                    
+                    
+                    let profileURL = userProfile as! String?
+                    
+                    let url = URL(string: userProfile as! String!)
+                    
+                    self.profileImage.af_setImage(withURL: url!)
+        
+            
+                    
+                    
+                }
+            }
+        })
+    
+    }
+    
+    func saveFIRData() {
+        self.uploadImage(self.profileImage.image!) { url in
+            self.saveImage(profileURL: url!) { success in
+                if success != nil {
+                    print("Yeah Yes")
+                }
+                
+            }
+        }
     }
     
 
@@ -77,7 +130,36 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         profileImage.image = scaledImage
         
+         self.saveFIRData()
+        
         dismiss(animated: true, completion: nil)
         
+    }
+    
+    
+    func uploadImage(_ image: UIImage, completion: @escaping ((_ url: URL?) ->())) {
+        let storageRef = Storage.storage().reference().child(userID!)
+        let imageData = profileImage.image?.pngData()
+        let metaData = StorageMetadata()
+        
+        metaData.contentType = "image/png"
+        storageRef.putData(imageData!, metadata: metaData) { (metaData, error) in
+            if error == nil {
+                print("Success")
+                storageRef.downloadURL(completion: { (url , error) in
+                    completion(url)
+                })
+            }
+            else {
+                print("Error in save image")
+                completion(nil)
+            }
+        }
+    }
+    
+    func saveImage(profileURL: URL, completion: @escaping ((_ url: URL?) ->())) {
+        let dic = ["profileURL": profileURL.absoluteString] as [String: Any]
+//        print(dic)
+        self.ref.child("Pictures").child(userID!).child("userProfile").setValue(dic)
     }
 }

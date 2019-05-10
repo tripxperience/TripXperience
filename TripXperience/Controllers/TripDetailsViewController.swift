@@ -29,7 +29,7 @@ class TripDetailsViewController: UIViewController {
         
         
         let url = URL(string: tripImage)
-    
+        
         
         self.titleBar.title = tripTitle
         self.detailLabel.text = tripDescription
