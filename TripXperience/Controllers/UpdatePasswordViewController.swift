@@ -52,11 +52,12 @@ class UpdatePasswordViewController: UIViewController {
                     print("You have successfully updated your password")
                     let alertController = UIAlertController(title: "Success", message: "Password Successfully Updated", preferredStyle: .alert)
                     
-                    let profile = self.storyboard?.instantiateViewController(withIdentifier: "Profile")
+                    let profile = self.storyboard?.instantiateViewController(withIdentifier: "TabBar")
                     alertController.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { _ in
                         
                         // Present Login VC
                         self.present(profile!, animated: true, completion: nil)
+//                        self.dismiss(animated: true, completion: nil)
                         
                     }))
                     self.present(alertController, animated: true, completion: nil)
