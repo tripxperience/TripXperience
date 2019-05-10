@@ -33,6 +33,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         self.HomeTripTableView.separatorStyle = .none
+        self.HomeTripTableView.backgroundColor = UIColor.darkGray
         
         // Database Reference to fetch Trips
         ref = Database.database().reference()

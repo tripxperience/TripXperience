@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		15014F8B225BF73D00EDDD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15014F8A225BF73D00EDDD7D /* AppDelegate.swift */; };
 		15014F90225BF73D00EDDD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15014F8E225BF73D00EDDD7D /* Main.storyboard */; };
-		15014F92225BF73E00EDDD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15014F91225BF73E00EDDD7D /* Assets.xcassets */; };
 		15014F95225BF73E00EDDD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15014F93225BF73E00EDDD7D /* LaunchScreen.storyboard */; };
 		15014FA0225BF73F00EDDD7D /* TripXperienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15014F9F225BF73F00EDDD7D /* TripXperienceTests.swift */; };
 		15014FAB225BF73F00EDDD7D /* TripXperienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15014FAA225BF73F00EDDD7D /* TripXperienceUITests.swift */; };
 		1543325C2271135500784A00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543325B2271135500784A00 /* ProfileViewController.swift */; };
+		15A7C11C22853FF100589750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A7C11B22853FF100589750 /* Assets.xcassets */; };
 		15A9C5FF2265369E009C12B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */; };
 		15A9C60122653997009C12B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9C60022653997009C12B5 /* LoginViewController.swift */; };
 		15B48FE02283A50F0019DCDE /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B48FDF2283A50F0019DCDE /* TripModel.swift */; };
@@ -52,7 +52,6 @@
 		15014F87225BF73D00EDDD7D /* TripXperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripXperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15014F8A225BF73D00EDDD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15014F8F225BF73D00EDDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		15014F91225BF73E00EDDD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15014F94225BF73E00EDDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15014F96225BF73F00EDDD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15014F9B225BF73F00EDDD7D /* TripXperienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripXperienceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +61,7 @@
 		15014FAA225BF73F00EDDD7D /* TripXperienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripXperienceUITests.swift; sourceTree = "<group>"; };
 		15014FAC225BF73F00EDDD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1543325B2271135500784A00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		15A7C11B22853FF100589750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15A9C5FE2265369E009C12B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15A9C60022653997009C12B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		15B48FDF2283A50F0019DCDE /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				1543325E22711EC200784A00 /* Storyboards */,
 				1543325D22711EB000784A00 /* Controllers */,
 				15014F8A225BF73D00EDDD7D /* AppDelegate.swift */,
-				15014F91225BF73E00EDDD7D /* Assets.xcassets */,
+				15A7C11B22853FF100589750 /* Assets.xcassets */,
 				15014F96225BF73F00EDDD7D /* Info.plist */,
 				72FC61A1225C5FDC00208FDB /* GoogleService-Info.plist */,
 			);
@@ -322,8 +322,8 @@
 				15014F95225BF73E00EDDD7D /* LaunchScreen.storyboard in Resources */,
 				28391546225C034D00712F10 /* Trips.storyboard in Resources */,
 				72FC61A2225C5FDC00208FDB /* GoogleService-Info.plist in Resources */,
-				15014F92225BF73E00EDDD7D /* Assets.xcassets in Resources */,
 				15014F90225BF73D00EDDD7D /* Main.storyboard in Resources */,
+				15A7C11C22853FF100589750 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
