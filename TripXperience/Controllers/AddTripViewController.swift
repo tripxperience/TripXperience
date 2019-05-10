@@ -74,9 +74,9 @@ class AddTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         present(picker, animated: true, completion: nil)
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func backButton(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         

@@ -60,7 +60,7 @@
                         <color key="tintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="wbJ-1u-jxG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="2Pp-kB-cSX">
+                    <tabBarItem key="tabBarItem" title="My Profile" id="2Pp-kB-cSX">
                         <color key="badgeColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
@@ -167,7 +167,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="213" height="199.66666666666666"/>
                                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-DX-7uA">
                                                     <rect key="frame" x="221" y="87.666666666666671" width="159" height="24.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="159" id="EZ7-hF-54g"/>
@@ -179,7 +179,8 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="E3s-DX-7uA" firstAttribute="leading" secondItem="Tkr-Pd-sYl" secondAttribute="trailing" constant="8" symbolic="YES" id="B3P-ze-EqQ"/>
+                                                <constraint firstItem="Tkr-Pd-sYl" firstAttribute="leading" secondItem="Ej8-do-saZ" secondAttribute="leading" constant="8" id="2bj-r7-0Bs"/>
+                                                <constraint firstItem="E3s-DX-7uA" firstAttribute="leading" secondItem="Tkr-Pd-sYl" secondAttribute="trailing" constant="8" id="2xf-QI-cwq"/>
                                                 <constraint firstItem="Tkr-Pd-sYl" firstAttribute="leading" secondItem="Ej8-do-saZ" secondAttribute="leading" id="iAr-fE-Ywg"/>
                                                 <constraint firstItem="Tkr-Pd-sYl" firstAttribute="centerY" secondItem="E3s-DX-7uA" secondAttribute="centerY" id="mbR-lI-7rd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="E3s-DX-7uA" secondAttribute="trailing" constant="-20" id="t8G-vC-3Pm"/>
@@ -216,8 +217,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Waz-oH-9Qo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Trip" id="xWp-Dt-x2b">
-                        <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                    <tabBarItem key="tabBarItem" title="My Trips" id="xWp-Dt-x2b">
+                        <color key="badgeColor" red="1" green="0.534995518" blue="0.26385640659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -251,24 +252,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNV-BN-cjk">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.94451826810836792" green="0.68545991182327271" blue="0.29004162549972534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem id="b7W-Yp-b5R">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="phS-oP-4R7">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <action selector="backButton:" destination="vqv-S1-iHM" id="yN2-VX-YZf"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-2" translatesAutoresizingMaskIntoConstraints="NO" id="8i1-76-x4i">
                                 <rect key="frame" x="1" y="433" width="374" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -365,13 +348,13 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-po-USn">
                                 <rect key="frame" x="0.0" y="88" width="375" height="271"/>
-                                <color key="backgroundColor" red="0.9363463407" green="0.9363463407" blue="0.9363463407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43535482883453369" green="0.44280016422271729" blue="0.47058898210525513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c39-ur-RwG" firstAttribute="centerX" secondItem="TkO-po-USn" secondAttribute="centerX" id="8bs-R3-JXu"/>
                             <constraint firstItem="BNq-KV-GuE" firstAttribute="leading" secondItem="JX3-UR-cZm" secondAttribute="leading" id="OVl-PW-Bpm"/>
@@ -382,6 +365,7 @@
                             <constraint firstItem="JX3-UR-cZm" firstAttribute="trailing" secondItem="TkO-po-USn" secondAttribute="trailing" id="ktl-Ug-kAn"/>
                             <constraint firstItem="BNq-KV-GuE" firstAttribute="top" secondItem="JX3-UR-cZm" secondAttribute="top" id="mpV-Hp-Qgz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="c39-ur-RwG" secondAttribute="bottom" constant="-67" id="nvS-bU-v8r"/>
+                            <constraint firstItem="TkO-po-USn" firstAttribute="leading" secondItem="JX3-UR-cZm" secondAttribute="leading" constant="4" id="qUg-jf-9Wk"/>
                             <constraint firstItem="TkO-po-USn" firstAttribute="top" secondItem="BNq-KV-GuE" secondAttribute="bottom" constant="10" id="sE1-4Z-WRt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JX3-UR-cZm"/>
@@ -404,7 +388,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="ITq-Ff-Vd6" kind="relationship" relationship="viewControllers" id="U04-Nn-K4A"/>
