@@ -40,6 +40,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
         HomeTripTableView.dataSource = self
 //        getTrips()
         myRefreshController.addTarget(self, action: #selector(getTrips), for: .valueChanged)
+        getTrips()
         HomeTripTableView.refreshControl = myRefreshController
     }
     
@@ -59,7 +60,7 @@ class HomeTripsViewController: UIViewController, UITableViewDataSource, UITableV
                     let tripObject = Trips.value as? [String: AnyObject]
                     let tripTitle  = tripObject?["title"]
                     let tripDescription  = tripObject?["description"]
-                    print(tripTitle)
+                    print(tripTitle!)
                     let trip = TripModel(title: tripTitle  as! String?, description: tripDescription as! String?)
                     self.userTrips.append(trip)
                 }
