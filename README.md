@@ -1,4 +1,4 @@
-Group 1 Project - README Template
+Group 1 Project - README 
 ===
 
 # TripXperience #
